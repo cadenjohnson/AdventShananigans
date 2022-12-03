@@ -1,3 +1,5 @@
+
+
 with open("penis.txt", 'r+') as penisfile:
     penis, softpenis, semipenis, maxpenis = 0,0,0,0
     for i in penisfile:
