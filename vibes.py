@@ -1,4 +1,22 @@
 
+def find_target(indicator_length, array, success):
+    if len(array) == indicator_length:
+        test = sorted(array)
+        y=0
+        for j in test:
+            y+=1
+            if y < indicator_length:
+                if test[y-1] == test[y]:
+                    break
+            else:
+                if success == 0:
+                    success=count
+                    print(success)
+                    print(array)
+                    return success
+    return success
+
+
 with open("testinput.txt", "r", encoding='utf-8') as signalstream:
     buffarray, messagearray=[],[]
     success, success2= 0,0
@@ -13,36 +31,5 @@ with open("testinput.txt", "r", encoding='utf-8') as signalstream:
             buffarray = buffarray[1:]
         if len(messagearray) > 14:
             messagearray = messagearray[1:]
-
-        if len(buffarray) == 4:
-            test = sorted(buffarray)
-            
-            z=0
-            for i in test:
-                z+=1
-                if z < 4:
-                    if test[z-1] == test[z]:
-                        break
-                else:
-                    if success == 0:
-                        success = count
-                        print(success)
-                        print(buffarray)
-                        print(test)
-                    break
-        
-        if len(messagearray) == 14:
-            test2 = sorted(messagearray)
-            y=0
-            for j in test2:
-                y+=1
-                if y < 14:
-                    if test2[y-1] == test2[y]:
-                        break
-                else:
-                    if success2 == 0:
-                        success2=count
-                        print("m-",success2)
-                        print(messagearray)
-                        print(test2)
-                    break
+        success = find_target(4, buffarray, success)
+        success2 = find_target(14, messagearray, success2)
