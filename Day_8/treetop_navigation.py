@@ -1,5 +1,5 @@
 
-forest = open("testinput.txt", "r")
+forest = open("testinput8.txt", "r")
 trees = []
 
 for line in forest:

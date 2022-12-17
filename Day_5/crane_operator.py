@@ -8,7 +8,6 @@ def onebyone(racks, instructions):
 
             addrack = racks[more] + (racks[less])[-1]
             leastrack = (racks[less])[:-1]
-            abendago = "idk wtf i'm doing"
 
             racks[more] = addrack
             racks[less] = leastrack
@@ -17,7 +16,7 @@ def onebyone(racks, instructions):
 
 
 # part two
-def heftyboi(racks, instructions):
+def multimove(racks, instructions):
     for demand in instructions:
         less = int(demand[1])-1
         more = int(demand[2])-1
@@ -28,7 +27,6 @@ def heftyboi(racks, instructions):
         
         addrack = racks[more] + (racks[less])[temp:]
         leastrack = (racks[less])[:temp]
-        abendago = "idk wtf i'm doing"
 
         racks[more] = addrack
         racks[less] = leastrack
@@ -36,7 +34,7 @@ def heftyboi(racks, instructions):
     return racks
 
 
-file = open("testinput.txt", "r")
+file = open("testinput5.txt", "r")
 movinracks = file.readlines()
 
 initrackheight, instructlength, rackquant = 0, 0, 0
@@ -70,4 +68,4 @@ for rack in racks:
     count+=1
 
 #print("racks: \n", onebyone(racks, instructions))
-print("racks: \n", heftyboi(racks, instructions))
+print("racks: \n", multimove(racks, instructions))

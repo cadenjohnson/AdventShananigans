@@ -28,23 +28,23 @@ pumpkineater = {
 }
 
 
-with open("testinput.txt", "r") as wtf:
-    for line in wtf:
-        playa, bigboi = switcharoo[line[0]], line[2]
+with open("testinput2.txt", "r") as file:
+    for line in file:
+        opponent, player = switcharoo[line[0]], line[2]
 
-        if bigboi == "X":
-            bigboi = chickendinner[playa]
-        elif bigboi == "Y":
-            bigboi = playa
+        if player == "X":
+            player = chickendinner[opponent]
+        elif player == "Y":
+            player = opponent
         else:
-            bigboi = pumpkineater[playa]
+            player = pumpkineater[opponent]
 
-        if chickendinner[bigboi] == playa:
+        if chickendinner[player] == opponent:
             score+=6
-        elif playa == bigboi:
+        elif opponent == player:
             score+=3
 
-        score+=points[bigboi]
+        score+=points[player]
 
 
 print(score)

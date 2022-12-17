@@ -60,6 +60,7 @@ class Monkey:
                 temp = self.how_worried(self.current_item)
                 # no longer... the bastards have adapted...
                 #self.current_item = temp // 3
+                # part 2
                 self.current_item = temp % self.LCM
                 tested = self.is_he_worried(self.current_item)
                 if tested:
@@ -108,7 +109,7 @@ def get_inspections(monkeys):
 
 
 
-file = open("testinput.txt", "r")
+file = open("testinput11.txt", "r")
 monkeys = eval_input(file)
 
 testers = []

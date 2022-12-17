@@ -20,7 +20,7 @@ def draw(cycle, X, CRT):
         return CRT
 
 
-instructions = open("testinput.txt", "r")
+instructions = open("testinput10.txt", "r")
 cycle = 0
 X=1
 signal_strengths = []
@@ -46,8 +46,8 @@ for i in instructions:
 
 print(sum(signal_strengths[1::2]))
 for line in CRT:
-    temp = ''
+    displayed_pixels = ''
     for pixel in line:
-        temp+=pixel
-    print(temp)
+        displayed_pixels+=pixel
+    print(displayed_pixels)
 

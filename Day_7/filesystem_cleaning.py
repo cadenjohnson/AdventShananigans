@@ -1,5 +1,5 @@
 
-terminal =  open("testinput.txt", "r")
+terminal =  open("testinput7.txt", "r")
 
 
 class Directory:
@@ -105,8 +105,8 @@ for line in terminal:
 
 total, small_sizes, candidate = get_size(root_directory)
 free_up = 30000000 - (70000000 - total)
-candidate = ['itchyanus',70000000]
+candidate = ['testfiller',70000000]
 total, small_sizes, target_directory = get_size(root_directory, free_up, candidate)
 
 #print(sum(small_sizes))
-print(total, sum(small_sizes), target_directory)
+print(sum(small_sizes), target_directory)

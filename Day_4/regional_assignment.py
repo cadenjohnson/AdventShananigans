@@ -14,7 +14,7 @@ def overlap(range1, range2):
     return False
 
 
-with open("testinput.txt", "r") as jobranges:
+with open("testinput4.txt", "r") as jobranges:
     inefficientteams = 0
     range1, range2 = [0,0], [0,0]
     for line in jobranges:

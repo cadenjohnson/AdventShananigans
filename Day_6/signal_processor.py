@@ -17,7 +17,7 @@ def find_target(indicator_length, array, success):
     return success
 
 
-with open("testinput.txt", "r", encoding='utf-8') as signalstream:
+with open("testinput6.txt", "r", encoding='utf-8') as signalstream:
     buffarray, messagearray=[],[]
     success, success2= 0,0
     count = 0

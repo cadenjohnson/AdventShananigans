@@ -45,6 +45,7 @@ class Knot:
     def follow(self):
         distance_x = abs(self.head.location[0] - self.location[0])
         distance_y = abs(self.head.location[1] - self.location[1])
+
         # diagonal move -- wow, so much effort put into this...
         if distance_x + distance_y == 3:
             x = convert_to_one(self.head.location[0] - self.location[0])
@@ -52,7 +53,7 @@ class Knot:
             self.update_history()
             self.location = (self.location[0] + x, self.location[1] + y)
 
-        # non-gay move
+        # straight move
         elif distance_x > 1 or distance_y > 1:
             self.update_history()
             x = convert_to_one(self.head.location[0] - self.location[0])
@@ -61,7 +62,7 @@ class Knot:
 
 
 
-instructions = open("testinput.txt", "r")
+instructions = open("testinput9.txt", "r")
 
 # create knots in rope
 Knots = []
